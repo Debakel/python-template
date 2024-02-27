@@ -1,14 +1,67 @@
 # {{cookiecutter.project_name}}
 
-## Setup
-```sh
-# Install dependencies
-pipenv install --dev
+Add a project description here.
 
-# Setup pre-commit and pre-push hooks
-pipenv run pre-commit install -t pre-commit
-pipenv run pre-commit install -t pre-push
-```
+## Documentation
+
+Design and other technical decisions relevant to this application are listed in
+an [Architecture Decision Record](docs/decisions/0000-decision-record.md), which can be found [here](docs/decisions).
+
+## Getting Started
+
+### Prerequisite
+
+The setup requires:
+
+* [pipenv](https://github.com/pypa/pipenv) to install and manage dependencies
+* [pyenv](https://github.com/pyenv/pyenv) to install the required python version
+
+If _pyenv_ is not installed, you must install Python {{cookiecutter.python_version}} manually.
+
+### Installation
+
+To install all python dependencies, run:
+
+    pipenv install --dev
+
+### Usage
+
+    python -m {{cookiecutter.repo_name}} 42
+
+### Docker
+
+If you prefer using Docker for containerized setup:
+
+    docker build -t {{cookiecutter.repo_name}} .  
+    docker run {{cookiecutter.repo_name}}
+
+## Code Quality
+
+We use [pre-commit](https://pre-commit.com/) together with [Ruff](https://docs.astral.sh/ruff/) to enforce a consistent
+code style, conformity with [PEP8](https://peps.python.org/pep-0008/) and other code quality standards.
+
+To add the git hooks to your local repository run:
+
+    pre-commit install
+
+This will install a pre-commit hook that rejects the commit if the staged changes do not satisfy our code quality
+standards.
+
+To trigger the checks manually, run:
+
+    pre-commit run --all-files
+
+## Tests
+
+Unit tests can be run with:
+
+    pytest
+
+## Contact
+
+* Moritz Duchêne (duchene@mrtz.me)
 
 ## Credits
-This package was created with Cookiecutter and the [sourcery-ai/python-best-practices-cookiecutter](https://github.com/sourcery-ai/python-best-practices-cookiecutter) project template.
+
+This package was created with Cookiecutter and
+the [Debakel/python-cookiecutter/](https://github.com/Debakel/python-cookiecutter/) project template.

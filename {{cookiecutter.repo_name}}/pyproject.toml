@@ -1,0 +1,28 @@
+[tool.ruff.lint]
+select = [
+    # pycodestyle (check PEP 8 conventions)
+    "E",
+    # Pyflakes (detects various errors)
+    "F",
+    # pyupgrade (automatically upgrade syntax for newer versions of Python)
+    "UP",
+    # flake8-bugbear (finds likely bugs and design problems)
+    "B",
+    # flake8-simplify (simplifies the syntax)
+    "SIM",
+    # isort (sorts imports)
+    "I",
+]
+
+ignore = [
+    "E501", # Ignored because Ruff Formatter is responsible for the line length
+    "SIM108",
+    "B008"
+]
+
+[tool.mypy]
+files = [
+    "{{cookiecutter.repo_name}}",
+    "test"
+]
+ignore_missing_imports = true
