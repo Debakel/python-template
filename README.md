@@ -9,6 +9,7 @@
 - Git hooks that run all the above with [pre-commit](https://pre-commit.com/)
 - Deployment ready with [Docker](https://docker.com/)
 - Continuous Integration with [GitHub Actions](https://github.com/features/actions)
+- Architecture decisions documented in an [Architecture Decision Record](https://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions)
 
 ## Quickstart
 
