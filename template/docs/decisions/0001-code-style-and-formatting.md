@@ -18,8 +18,6 @@ We chose Ruff over [Black](https://github.com/psf/black) due to performance reas
 
 
 The Ruff formatter is quite opinionated and does not support configuring code styles. *Some people may
-not like that code style.* But we "will save time and mental energy for more important matters". 
+not like that code style.* But we "will save time and mental energy for more important matters".
 
 Code reviews get faster thanks to smaller diffs.
-
-

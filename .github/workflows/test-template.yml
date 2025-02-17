@@ -1,0 +1,49 @@
+name: Test Template
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.12"
+
+      - name: Install Copier
+        run: pip install copier
+
+      - name: Configure Git
+        run: |
+          git config --global user.email "bob@example.com"
+          git config --global user.name "Bob"
+
+      - name: Generate project from template
+        run: |
+          copier copy . test_project --trust --defaults
+
+      - name: Setup environment for generated project
+        working-directory: test_project
+        run: |
+          pip install pipenv
+          pipenv install --dev
+
+      - name: Run linter
+        working-directory: test_project
+        run: pipenv run pre-commit run --all-files
+
+      - name: Run tests
+        working-directory: test_project
+        run: pipenv run pytest
+
+      - name: Clean up
+        run: rm -rf test_project

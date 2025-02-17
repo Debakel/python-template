@@ -18,6 +18,7 @@ project_name:
 project_description:
   type: str
   help: "Project description"
+  default: ""
 
 package_name:
   type: str

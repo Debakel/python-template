@@ -27,4 +27,3 @@ Once `copier` is installed, generate a new python project with:
 ```
 copier copy https://github.com/Debakel/python-template.git --trust
 ```
-
