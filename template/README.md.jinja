@@ -1,6 +1,6 @@
-# {{cookiecutter.project_name}}
+# {{project_name}}
 
-Add a project description here.
+{{project_description}}
 
 ## Documentation
 
@@ -16,7 +16,7 @@ The setup requires:
 * [pipenv](https://github.com/pypa/pipenv) to install and manage dependencies
 * [pyenv](https://github.com/pyenv/pyenv) to install the required python version
 
-If _pyenv_ is not installed, you must install Python {{cookiecutter.python_version}} manually.
+If _pyenv_ is not installed, you must install Python {{python_version}} manually.
 
 ### Installation
 
@@ -26,14 +26,14 @@ To install all python dependencies, run:
 
 ### Usage
 
-    python -m {{cookiecutter.repo_name}} 42
+    python -m {{package_name}} 42
 
 ### Docker
 
 If you prefer using Docker for containerized setup:
 
-    docker build -t {{cookiecutter.repo_name}} .  
-    docker run {{cookiecutter.repo_name}}
+    docker build -t {{package_name}} .
+    docker run {{package_name}}
 
 ## Code Quality
 
@@ -63,5 +63,5 @@ Unit tests can be run with:
 
 ## Credits
 
-This package was created with Cookiecutter and
-the [Debakel/python-cookiecutter/](https://github.com/Debakel/python-cookiecutter/) project template.
+This package was created with Copier and
+the [Debakel/python-template/](https://github.com/Debakel/python-template/) project template.

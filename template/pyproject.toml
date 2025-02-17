@@ -22,7 +22,7 @@ ignore = [
 
 [tool.mypy]
 files = [
-    "{{cookiecutter.repo_name}}",
+    "{{package_name}}",
     "test"
 ]
 ignore_missing_imports = true

@@ -1,0 +1,34 @@
+template_version:
+  default: 0.1.0
+  when: false
+
+_subdirectory: template
+
+_tasks:
+  - git init
+  - git add .
+  - git commit -m "Initial commit"
+
+
+project_name:
+  type: str
+  help: "Project name"
+  default: "Lorem Ipsum"
+
+project_description:
+  type: str
+  help: "Project description"
+
+package_name:
+  type: str
+  help: "Package name"
+  default: "{{ project_name.lower().replace(' ', '_').replace('-', '_') }}"
+  validator: >-
+    {% if not (package_name | regex_search('^[a-z][a-z0-9\_]+$')) %}
+    project_name must start with a letter, followed one or more letters, digits or dashes all lowercase.
+    {% endif %}
+
+python_version:
+  type: str
+  help: "Python version"
+  default: "3.12"

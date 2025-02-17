@@ -1,6 +1,6 @@
-# 🍪 Python Cookie Cutter
+# 🍪 Copier Python Template
 
-[Cookiecutter](https://github.com/cookiecutter/cookiecutter) template for a Python package.
+A [Copier](https://copier.readthedocs.io/en/stable/)  template for a Python package.
 
 ## Features
 - Testing with [pytest](https://docs.pytest.org/en/latest/)
@@ -11,31 +11,20 @@
 - Continuous Integration with [GitHub Actions](https://github.com/features/actions)
 - Architecture decisions documented in an [Architecture Decision Record](https://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions)
 
-## Quickstart
 
-Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher):
+## Getting started 🚀
+### Prerequisites
+To use this template, first [install `copier`](https://github.com/copier-org/copier?tab=readme-ov-file#installation):
+```
+pip install pipx
+pipx install copier
+```
 
-    pip install -U cookiecutter
+### Usage
+Once `copier` is installed, generate a new python project with:
 
-Generate a Python package project:
 
-    cookiecutter gh:Debakel/python-cookiecutter
-
-Or, with `pipx` installed:
-
-    pipx run cookiecutter gh:Debakel/python-cookiecutter
-
-**Then:**
-
-    # Enter project directory
-    cd <repo_name>
-    
-    # Initialise git repo
-    git init
-    
-    # Install dependencies
-    pipenv install --dev
-    
-    # Setup pre-commit and pre-push hooks
-    pipenv run pre-commit install
+```
+copier copy https://github.com/Debakel/python-template.git --trust
+```
 

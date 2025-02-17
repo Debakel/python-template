@@ -1,5 +1,0 @@
-{
-  "project_name": "Lorem Ipsum",
-  "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-  "python_version": "3.12"
-}
