@@ -27,6 +27,9 @@ jobs:
           git config --global user.email "bob@example.com"
           git config --global user.name "Bob"
 
+      - name: Install pipenv
+        run:  pip install pipenv
+
       - name: Generate project from template
         run: |
           copier copy . test_project --trust --defaults
@@ -34,7 +37,6 @@ jobs:
       - name: Setup environment for generated project
         working-directory: test_project
         run: |
-          pip install pipenv
           pipenv install --dev
 
       - name: Run linter

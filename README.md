@@ -14,16 +14,20 @@ A [Copier](https://copier.readthedocs.io/en/stable/)  template for a Python pack
 
 ## Getting started 🚀
 ### Prerequisites
-To use this template, first [install `copier`](https://github.com/copier-org/copier?tab=readme-ov-file#installation):
+To use this template, [`copier`](https://github.com/copier-org/copier?tab=readme-ov-file#installation) and [`pipenv`](https://pipenv.pypa.io/en/latest/installation.html) must be installed.
+
+It is recommended to install both tools as follows:
+
 ```
 pip install pipx
 pipx install copier
+pip install pipenv --user
 ```
 
 ### Usage
-Once `copier` is installed, generate a new python project with:
+Once `copier` and `pipenv` are installed, generate a new python project with:
 
 
 ```
-copier copy https://github.com/Debakel/python-template.git --trust
+copier copy https://github.com/Debakel/python-template.git --trust <output-directory>
 ```

@@ -8,6 +8,9 @@ _tasks:
   - git init
   - git add .
   - git commit -m "Initial commit"
+  - pipenv lock
+  - git add Pipfile.lock
+  - git commit -m "Create Pipfile.lock"
 
 
 project_name:
